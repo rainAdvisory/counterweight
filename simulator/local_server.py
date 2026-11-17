@@ -1,4 +1,4 @@
-"""Offline laptop demo. Uses Python's standard library, not ESP32 firmware."""
+"""ChatGPT's attempt at a sim."""
 
 import argparse
 import json
