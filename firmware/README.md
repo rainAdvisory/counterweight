@@ -18,3 +18,10 @@ Configure credentials locally, and set `UNIT_WEIGHT_G` to the measured mass of o
 - No product persistence, transaction history, authentication or executable packaging is implemented here.
 - Desktop simulator is a separate fixed-data demo, not yet shared firmware logic.
 - Syntax checking on a Mac does not verify hardware or MicroPython runtime behaviour.
+
+## How to Set up: 
+- Connect the ESP32 to your laptop/device that has an IDE.
+- Run this in the terminal to find the ESP's modem port. ls /dev/cu.* # This will be useful in the next step.
+- Run another command in the terminal: python -m mpremote connect (The ESP32's USB modem port) run main.py
+- Open the link given.
+- Enjoy!
