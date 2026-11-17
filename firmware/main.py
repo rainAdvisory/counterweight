@@ -4,12 +4,16 @@ import asyncio
 from machine import Pin, disable_irq, enable_irq
 from microdot import Microdot
 
-# Replace placeholders locally; never commit real network credentials.
+# Replace placeholders
+# --- !!NEVER COMMIT REAL NETWORK CREDENTIALS!!! --- 
 SSID = "~~"
 PASSWORD = "~~"
 EMPTY_READING = -685478
 COUNTS_PER_GRAM = -1668.83
-UNIT_WEIGHT_G = None  # Set to the measured mass of one identical item.
+# Set to the measured mass of one identical item. 
+# For further details, open README.md (firmware)
+UNIT_WEIGHT_G = None  
+
 
 dt = Pin(4, Pin.IN)
 sck = Pin(5, Pin.OUT, value=0)
@@ -176,7 +180,7 @@ async def tare_scale():
 
 
 async def main():
-    # Prototype: empty the scale before EVERY startup.
+    # !!PROTOTYPE!! empty the scale before EVERY startup.
     await tare_scale()
     sensor_task = asyncio.create_task(sample_sensor())
     try:
