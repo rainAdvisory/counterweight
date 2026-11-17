@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+secrets.py
+config_local.py
+wifi_config.py
+build/
+dist/
+*.app/
+*.zip
+runtime_data/
+*.log
