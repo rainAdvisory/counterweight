@@ -1,0 +1,28 @@
+## Libraries and dependencies
+
+The hardware program runs on an ESP32-C6 using MicroPython.
+
+Libraries used:
+- network Connects the ESP32 to Wi-Fi.
+- time Sensor timing, reading age + timeouts.
+- asyncio (Coordinates sensor sampling + HTTP Server tasks)
+- machine (GPIO access + interrupt control)
+- Microdot (Dashboard + API usage) 
+
+### Third-party acknowledgement
+
+This project uses Microdot, developed by Miguel Grinberg:
+https://github.com/miguelgrinberg/microdot
+
+Microdot version used: [record the installed version].
+
+### Development tools
+
+- Visual Studio Code
+- mpremote for transferring files and accessing the ESP32 
+- esptool for initially flashing MicroPython firmware
+
+### Local demonstration
+
+The desktop demonstration uses Python's standard library and
+does not require MicroPython or Microdot.
