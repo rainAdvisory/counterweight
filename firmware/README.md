@@ -1,6 +1,10 @@
+For the people who like forking, (and are especially new GitHub users),
+
+## Do not commit actual Wi-Fi credentials. 
+
 # ESP32 firmware
 
-`main.py` is the user's supplied prototype, with paste escaping removed and formatting cleaned. Hardware behaviour is preserved. Wi-Fi credentials remain placeholders.
+`main.py` is a prototype. Won't be the best. 
 
 ## Requirements
 
@@ -8,7 +12,7 @@
 - Microdot installed on the board; its exact installed version is not yet recorded. Third-party library source is not bundled here. Project: https://github.com/miguelgrinberg/microdot
 - HX711: DT to GPIO4, SCK to GPIO5, compatible 3.3 V supply and common ground; connected load cell.
 
-Configure credentials locally, and set `UNIT_WEIGHT_G` to the measured mass of one identical item to enable quantity estimates. Do not commit actual credentials. Copy the program to the board as `main.py` along with its required Microdot dependency. The program prints its HTTP address after connecting to Wi-Fi.
+
 
 ## Current limitations
 
@@ -20,8 +24,12 @@ Configure credentials locally, and set `UNIT_WEIGHT_G` to the measured mass of o
 - Syntax checking on a Mac does not verify hardware or MicroPython runtime behaviour.
 
 ## How to Set up: 
-- Connect the ESP32 to your laptop/device that has an IDE.
+- Configure credentials locally, and set `UNIT_WEIGHT_G` to the measured mass of one identical item to enable quantity estimates.
+- Download Microdot, and
+-  Connect the ESP32 to your laptop/device that has an IDE.
 - Run this in the terminal to find the ESP's modem port. ls /dev/cu.* # This will be useful in the next step.
+- Run command: python -m mpremote connect (ESP32's USB Modem port) fs cp main.py :main.py
 - Run another command in the terminal: python -m mpremote connect (The ESP32's USB modem port) run main.py
-- Open the link given.
-- Enjoy!
+- The program prints its HTTP address after connecting to Wi-Fi.
+- Enjoy.
+
