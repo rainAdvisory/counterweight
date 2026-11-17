@@ -28,7 +28,6 @@ If the port is occupied, use `python3 simulator/local_server.py --port 5001`.
 
 The hardware version runs MicroPython and Microdot on the ESP32, with HX711 DT on GPIO4 and SCK on GPIO5. Hardware-specific code cannot run unchanged in desktop Python. See `firmware/README.md` for prerequisites and current limitations.
 
-For fork kiddies, my advice: never commit Wi-Fi passwords or private network configuration. Instead, use a separate ignored configuration file and share only placeholders.
 
 ## Submission scope
 
