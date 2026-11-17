@@ -7,7 +7,7 @@ Robotics Club weight-based inventory project using an ESP32-C6, HX711 and load c
 
 ## Current repository contents
 
-- `simulator/local_server.py`: existing standalone Python demonstration with fixed simulated readings (30 g, 3 items). It does not connect to the ESP32 or implement the full inventory system.
+- `simulator/local_server.py`: existing standalone Python demonstration with fixed simulated readings (30 g, 3 items). It does not connect to the ESP32 or implement the full inventory system. (Planned PhET Sim executable later.)
 
 - `firmware/main.py`: supplied MicroPython prototype, with embedded dashboard and placeholder Wi-Fi credentials.
 
